@@ -3,6 +3,8 @@ Projet de Scraping Web avec Scrapy, Flask, et MongoDB
 Description 
 Ce projet est une application de scraping web développée en Python, utilisant Scrapy pour le scraping de données, Flask pour la création d'une API web, et MongoDB pour le stockage des données. Le projet est conçu pour être exécuté dans des conteneurs Docker, assurant ainsi une mise en place et un déploiement faciles. 
 
+la page scrapée est la suivante: https://www.francefleurs.com/428-roses  
+
   Technologies Utilisées:   
 Scrapy : Un framework de scraping web en Python pour extraire les données des sites web.   
 Flask : Un micro-framework web en Python pour développer l'API web.    
