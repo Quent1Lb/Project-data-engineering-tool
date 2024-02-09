@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data/mongo:/data/db 
+       
+    ports:
+      - 27017:27017
+  scrapy:
+    build: .  
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=mongodb://mongo:27017
+      - MONGO_DATABASE=nom_de_votre_base_de_donnees
+    ports:
+      - "5000:5000"  
+      - "8888:8888" 
+    command: ["python", "main.py"]  # Commande pour exécuter main.py à l'intérieur du conteneur
